@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" th:href="@{/css/admin.css}">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 条件成立显示-->
+    <h1 th:if="${flag == 'yes'}">值为：yes</h1>
+    <!-- 条件不成立显示-->
+    <h1 th:unless="${flag == 'no'}">值为：yes</h1>
+
+
+    <div th:switch="${user}">
+        <p th:case="user">user is user</p>
+        <p th:case="manager">user is manager</p>
+    </div>
+
+    <img th:src="@{/img/1.jpg}" alt="">
+
+
+
+
+
+</body>
+</html>
